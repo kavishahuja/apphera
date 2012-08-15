@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class ContentProvider - Apphera Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/content_provider.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-cp">::cp</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Account.html">Account</a>
+  
+    <li><a href="./AccountType.html">AccountType</a>
+  
+    <li><a href="./AccountTypesController.html">AccountTypesController</a>
+  
+    <li><a href="./AccountTypesHelper.html">AccountTypesHelper</a>
+  
+    <li><a href="./AccountsController.html">AccountsController</a>
+  
+    <li><a href="./AccountsHelper.html">AccountsHelper</a>
+  
+    <li><a href="./AdminUser.html">AdminUser</a>
+  
+    <li><a href="./AggregateResult.html">AggregateResult</a>
+  
+    <li><a href="./AggregateResultsController.html">AggregateResultsController</a>
+  
+    <li><a href="./AggregateResultsHelper.html">AggregateResultsHelper</a>
+  
+    <li><a href="./AlertSms.html">AlertSms</a>
+  
+    <li><a href="./AppheraGetCompetitors.html">AppheraGetCompetitors</a>
+  
+    <li><a href="./AppheraObserver.html">AppheraObserver</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Array.html">Array</a>
+  
+    <li><a href="./BingApi.html">BingApi</a>
+  
+    <li><a href="./CategoriesHelper.html">CategoriesHelper</a>
+  
+    <li><a href="./Category.html">Category</a>
+  
+    <li><a href="./CitiesHelper.html">CitiesHelper</a>
+  
+    <li><a href="./City.html">City</a>
+  
+    <li><a href="./CommandItem.html">CommandItem</a>
+  
+    <li><a href="./CommandItemsHelper.html">CommandItemsHelper</a>
+  
+    <li><a href="./Contact.html">Contact</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./ContentProvider.html">ContentProvider</a>
+  
+    <li><a href="./ContentProvidersHelper.html">ContentProvidersHelper</a>
+  
+    <li><a href="./CountryCodes.html">CountryCodes</a>
+  
+    <li><a href="./CrawlerJob.html">CrawlerJob</a>
+  
+    <li><a href="./CrawlerJobsHelper.html">CrawlerJobsHelper</a>
+  
+    <li><a href="./Customertype.html">Customertype</a>
+  
+    <li><a href="./CustomertypesHelper.html">CustomertypesHelper</a>
+  
+    <li><a href="./DatabaseCount.html">DatabaseCount</a>
+  
+    <li><a href="./FacebookUrl.html">FacebookUrl</a>
+  
+    <li><a href="./Facebookpage.html">Facebookpage</a>
+  
+    <li><a href="./FacebookpagesHelper.html">FacebookpagesHelper</a>
+  
+    <li><a href="./FailedJob.html">FailedJob</a>
+  
+    <li><a href="./FakeQueue.html">FakeQueue</a>
+  
+    <li><a href="./FakeQueueController.html">FakeQueueController</a>
+  
+    <li><a href="./Foursquare.html">Foursquare</a>
+  
+    <li><a href="./FoursquareCount.html">FoursquareCount</a>
+  
+    <li><a href="./FoursquareUser.html">FoursquareUser</a>
+  
+    <li><a href="./FoursquareVenue.html">FoursquareVenue</a>
+  
+    <li><a href="./Geodata.html">Geodata</a>
+  
+    <li><a href="./HistoryItem.html">HistoryItem</a>
+  
+    <li><a href="./HistoryItemsController.html">HistoryItemsController</a>
+  
+    <li><a href="./HistoryItemsHelper.html">HistoryItemsHelper</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InfoController.html">InfoController</a>
+  
+    <li><a href="./Job.html">Job</a>
+  
+    <li><a href="./JobObserver.html">JobObserver</a>
+  
+    <li><a href="./Keyword.html">Keyword</a>
+  
+    <li><a href="./KeywordsController.html">KeywordsController</a>
+  
+    <li><a href="./KeywordsHelper.html">KeywordsHelper</a>
+  
+    <li><a href="./Like.html">Like</a>
+  
+    <li><a href="./Listing.html">Listing</a>
+  
+    <li><a href="./Magellan.html">Magellan</a>
+  
+    <li><a href="./MagellansHelper.html">MagellansHelper</a>
+  
+    <li><a href="./MiscController.html">MiscController</a>
+  
+    <li><a href="./MyCompetitor.html">MyCompetitor</a>
+  
+    <li><a href="./MyCompetitorsController.html">MyCompetitorsController</a>
+  
+    <li><a href="./MyCompetitorsHelper.html">MyCompetitorsHelper</a>
+  
+    <li><a href="./NetworkWeather.html">NetworkWeather</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Organization.html">Organization</a>
+  
+    <li><a href="./OrganizationLink.html">OrganizationLink</a>
+  
+    <li><a href="./OrganizationsController.html">OrganizationsController</a>
+  
+    <li><a href="./OrganizationsHelper.html">OrganizationsHelper</a>
+  
+    <li><a href="./ProviderSlug.html">ProviderSlug</a>
+  
+    <li><a href="./ProviderSlugsHelper.html">ProviderSlugsHelper</a>
+  
+    <li><a href="./ProxiesApiController.html">ProxiesApiController</a>
+  
+    <li><a href="./ProxiesHelper.html">ProxiesHelper</a>
+  
+    <li><a href="./Proxy.html">Proxy</a>
+  
+    <li><a href="./ProxyList.html">ProxyList</a>
+  
+    <li><a href="./PublicKeyword.html">PublicKeyword</a>
+  
+    <li><a href="./Ranking.html">Ranking</a>
+  
+    <li><a href="./RankingsController.html">RankingsController</a>
+  
+    <li><a href="./RankingsHelper.html">RankingsHelper</a>
+  
+    <li><a href="./Rating.html">Rating</a>
+  
+    <li><a href="./Recommendation.html">Recommendation</a>
+  
+    <li><a href="./RecommendationsController.html">RecommendationsController</a>
+  
+    <li><a href="./RecommendationsHelper.html">RecommendationsHelper</a>
+  
+    <li><a href="./ResellerCategoriesHelper.html">ResellerCategoriesHelper</a>
+  
+    <li><a href="./ResellerCommissionsHelper.html">ResellerCommissionsHelper</a>
+  
+    <li><a href="./ResellersController.html">ResellersController</a>
+  
+    <li><a href="./ResellersHelper.html">ResellersHelper</a>
+  
+    <li><a href="./Review.html">Review</a>
+  
+    <li><a href="./ReviewWriter.html">ReviewWriter</a>
+  
+    <li><a href="./Reviewer.html">Reviewer</a>
+  
+    <li><a href="./ReviewersController.html">ReviewersController</a>
+  
+    <li><a href="./ReviewersHelper.html">ReviewersHelper</a>
+  
+    <li><a href="./ReviewsController.html">ReviewsController</a>
+  
+    <li><a href="./ReviewsHelper.html">ReviewsHelper</a>
+  
+    <li><a href="./Schedule.html">Schedule</a>
+  
+    <li><a href="./SchedulesApiController.html">SchedulesApiController</a>
+  
+    <li><a href="./SchedulesHelper.html">SchedulesHelper</a>
+  
+    <li><a href="./Sentiment.html">Sentiment</a>
+  
+    <li><a href="./Sequence.html">Sequence</a>
+  
+    <li><a href="./SequenceItem.html">SequenceItem</a>
+  
+    <li><a href="./SequenceItemsHelper.html">SequenceItemsHelper</a>
+  
+    <li><a href="./SequencesHelper.html">SequencesHelper</a>
+  
+    <li><a href="./SlugUrl.html">SlugUrl</a>
+  
+    <li><a href="./StartController.html">StartController</a>
+  
+    <li><a href="./SystemSetting.html">SystemSetting</a>
+  
+    <li><a href="./SystemSettingsController.html">SystemSettingsController</a>
+  
+    <li><a href="./SystemSettingsHelper.html">SystemSettingsHelper</a>
+  
+    <li><a href="./Task.html">Task</a>
+  
+    <li><a href="./TaskResult.html">TaskResult</a>
+  
+    <li><a href="./TaskTranslation.html">TaskTranslation</a>
+  
+    <li><a href="./TimerOption.html">TimerOption</a>
+  
+    <li><a href="./TimerOptionsHelper.html">TimerOptionsHelper</a>
+  
+    <li><a href="./Tweet.html">Tweet</a>
+  
+    <li><a href="./TwitterCount.html">TwitterCount</a>
+  
+    <li><a href="./TwitterCountsHelper.html">TwitterCountsHelper</a>
+  
+    <li><a href="./TwitterElasticHighspeed.html">TwitterElasticHighspeed</a>
+  
+    <li><a href="./TwitterKeyword.html">TwitterKeyword</a>
+  
+    <li><a href="./TwitterKeywordsController.html">TwitterKeywordsController</a>
+  
+    <li><a href="./TwitterKeywordsHelper.html">TwitterKeywordsHelper</a>
+  
+    <li><a href="./TwitterUrl.html">TwitterUrl</a>
+  
+    <li><a href="./TwitterUser.html">TwitterUser</a>
+  
+    <li><a href="./UptimeMonitor.html">UptimeMonitor</a>
+  
+    <li><a href="./UptimeMonitorsController.html">UptimeMonitorsController</a>
+  
+    <li><a href="./UptimeMonitorsHelper.html">UptimeMonitorsHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WorkQueue.html">WorkQueue</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ContentProvider</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-cp" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cp</span><span
+            class="method-args">(contentprovider)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cp-source">
+            <pre><span class="ruby-comment"># File app/models/content_provider.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cp</span>(<span class="ruby-identifier">contentprovider</span>)
+  <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;name = ?&quot;</span>, <span class="ruby-identifier">contentprovider</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cp-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cp-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

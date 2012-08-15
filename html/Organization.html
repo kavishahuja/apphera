@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Organization - Apphera Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/organization.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Tire::Model::Search</span>
+  
+  
+  
+    <li><span class="include">Tire::Model::Callbacks</span>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-comps">::comps</a>
+    
+    <li><a href="#method-c-name_like">::name_like</a>
+    
+    <li><a href="#method-c-names_like">::names_like</a>
+    
+    <li><a href="#method-c-paginate">::paginate</a>
+    
+    <li><a href="#method-c-streets_like">::streets_like</a>
+    
+    <li><a href="#method-i-create_schedule">#create_schedule</a>
+    
+    <li><a href="#method-i-existing_org">#existing_org</a>
+    
+    <li><a href="#method-i-get_apphera_comps">#get_apphera_comps</a>
+    
+    <li><a href="#method-i-gmaps4rails_address">#gmaps4rails_address</a>
+    
+    <li><a href="#method-i-lat_lon">#lat_lon</a>
+    
+    <li><a href="#method-i-list_of_reviewers">#list_of_reviewers</a>
+    
+    <li><a href="#method-i-to_indexed_json">#to_indexed_json</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Account.html">Account</a>
+  
+    <li><a href="./AccountType.html">AccountType</a>
+  
+    <li><a href="./AccountTypesController.html">AccountTypesController</a>
+  
+    <li><a href="./AccountTypesHelper.html">AccountTypesHelper</a>
+  
+    <li><a href="./AccountsController.html">AccountsController</a>
+  
+    <li><a href="./AccountsHelper.html">AccountsHelper</a>
+  
+    <li><a href="./AdminUser.html">AdminUser</a>
+  
+    <li><a href="./AggregateResult.html">AggregateResult</a>
+  
+    <li><a href="./AggregateResultsController.html">AggregateResultsController</a>
+  
+    <li><a href="./AggregateResultsHelper.html">AggregateResultsHelper</a>
+  
+    <li><a href="./AlertSms.html">AlertSms</a>
+  
+    <li><a href="./AppheraGetCompetitors.html">AppheraGetCompetitors</a>
+  
+    <li><a href="./AppheraObserver.html">AppheraObserver</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Array.html">Array</a>
+  
+    <li><a href="./BingApi.html">BingApi</a>
+  
+    <li><a href="./CategoriesHelper.html">CategoriesHelper</a>
+  
+    <li><a href="./Category.html">Category</a>
+  
+    <li><a href="./CitiesHelper.html">CitiesHelper</a>
+  
+    <li><a href="./City.html">City</a>
+  
+    <li><a href="./CommandItem.html">CommandItem</a>
+  
+    <li><a href="./CommandItemsHelper.html">CommandItemsHelper</a>
+  
+    <li><a href="./Contact.html">Contact</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./ContentProvider.html">ContentProvider</a>
+  
+    <li><a href="./ContentProvidersHelper.html">ContentProvidersHelper</a>
+  
+    <li><a href="./CountryCodes.html">CountryCodes</a>
+  
+    <li><a href="./CrawlerJob.html">CrawlerJob</a>
+  
+    <li><a href="./CrawlerJobsHelper.html">CrawlerJobsHelper</a>
+  
+    <li><a href="./Customertype.html">Customertype</a>
+  
+    <li><a href="./CustomertypesHelper.html">CustomertypesHelper</a>
+  
+    <li><a href="./DatabaseCount.html">DatabaseCount</a>
+  
+    <li><a href="./FacebookUrl.html">FacebookUrl</a>
+  
+    <li><a href="./Facebookpage.html">Facebookpage</a>
+  
+    <li><a href="./FacebookpagesHelper.html">FacebookpagesHelper</a>
+  
+    <li><a href="./FailedJob.html">FailedJob</a>
+  
+    <li><a href="./FakeQueue.html">FakeQueue</a>
+  
+    <li><a href="./FakeQueueController.html">FakeQueueController</a>
+  
+    <li><a href="./Foursquare.html">Foursquare</a>
+  
+    <li><a href="./FoursquareCount.html">FoursquareCount</a>
+  
+    <li><a href="./FoursquareUser.html">FoursquareUser</a>
+  
+    <li><a href="./FoursquareVenue.html">FoursquareVenue</a>
+  
+    <li><a href="./Geodata.html">Geodata</a>
+  
+    <li><a href="./HistoryItem.html">HistoryItem</a>
+  
+    <li><a href="./HistoryItemsController.html">HistoryItemsController</a>
+  
+    <li><a href="./HistoryItemsHelper.html">HistoryItemsHelper</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InfoController.html">InfoController</a>
+  
+    <li><a href="./Job.html">Job</a>
+  
+    <li><a href="./JobObserver.html">JobObserver</a>
+  
+    <li><a href="./Keyword.html">Keyword</a>
+  
+    <li><a href="./KeywordsController.html">KeywordsController</a>
+  
+    <li><a href="./KeywordsHelper.html">KeywordsHelper</a>
+  
+    <li><a href="./Like.html">Like</a>
+  
+    <li><a href="./Listing.html">Listing</a>
+  
+    <li><a href="./Magellan.html">Magellan</a>
+  
+    <li><a href="./MagellansHelper.html">MagellansHelper</a>
+  
+    <li><a href="./MiscController.html">MiscController</a>
+  
+    <li><a href="./MyCompetitor.html">MyCompetitor</a>
+  
+    <li><a href="./MyCompetitorsController.html">MyCompetitorsController</a>
+  
+    <li><a href="./MyCompetitorsHelper.html">MyCompetitorsHelper</a>
+  
+    <li><a href="./NetworkWeather.html">NetworkWeather</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Organization.html">Organization</a>
+  
+    <li><a href="./OrganizationLink.html">OrganizationLink</a>
+  
+    <li><a href="./OrganizationsController.html">OrganizationsController</a>
+  
+    <li><a href="./OrganizationsHelper.html">OrganizationsHelper</a>
+  
+    <li><a href="./ProviderSlug.html">ProviderSlug</a>
+  
+    <li><a href="./ProviderSlugsHelper.html">ProviderSlugsHelper</a>
+  
+    <li><a href="./ProxiesApiController.html">ProxiesApiController</a>
+  
+    <li><a href="./ProxiesHelper.html">ProxiesHelper</a>
+  
+    <li><a href="./Proxy.html">Proxy</a>
+  
+    <li><a href="./ProxyList.html">ProxyList</a>
+  
+    <li><a href="./PublicKeyword.html">PublicKeyword</a>
+  
+    <li><a href="./Ranking.html">Ranking</a>
+  
+    <li><a href="./RankingsController.html">RankingsController</a>
+  
+    <li><a href="./RankingsHelper.html">RankingsHelper</a>
+  
+    <li><a href="./Rating.html">Rating</a>
+  
+    <li><a href="./Recommendation.html">Recommendation</a>
+  
+    <li><a href="./RecommendationsController.html">RecommendationsController</a>
+  
+    <li><a href="./RecommendationsHelper.html">RecommendationsHelper</a>
+  
+    <li><a href="./ResellerCategoriesHelper.html">ResellerCategoriesHelper</a>
+  
+    <li><a href="./ResellerCommissionsHelper.html">ResellerCommissionsHelper</a>
+  
+    <li><a href="./ResellersController.html">ResellersController</a>
+  
+    <li><a href="./ResellersHelper.html">ResellersHelper</a>
+  
+    <li><a href="./Review.html">Review</a>
+  
+    <li><a href="./ReviewWriter.html">ReviewWriter</a>
+  
+    <li><a href="./Reviewer.html">Reviewer</a>
+  
+    <li><a href="./ReviewersController.html">ReviewersController</a>
+  
+    <li><a href="./ReviewersHelper.html">ReviewersHelper</a>
+  
+    <li><a href="./ReviewsController.html">ReviewsController</a>
+  
+    <li><a href="./ReviewsHelper.html">ReviewsHelper</a>
+  
+    <li><a href="./Schedule.html">Schedule</a>
+  
+    <li><a href="./SchedulesApiController.html">SchedulesApiController</a>
+  
+    <li><a href="./SchedulesHelper.html">SchedulesHelper</a>
+  
+    <li><a href="./Sentiment.html">Sentiment</a>
+  
+    <li><a href="./Sequence.html">Sequence</a>
+  
+    <li><a href="./SequenceItem.html">SequenceItem</a>
+  
+    <li><a href="./SequenceItemsHelper.html">SequenceItemsHelper</a>
+  
+    <li><a href="./SequencesHelper.html">SequencesHelper</a>
+  
+    <li><a href="./SlugUrl.html">SlugUrl</a>
+  
+    <li><a href="./StartController.html">StartController</a>
+  
+    <li><a href="./SystemSetting.html">SystemSetting</a>
+  
+    <li><a href="./SystemSettingsController.html">SystemSettingsController</a>
+  
+    <li><a href="./SystemSettingsHelper.html">SystemSettingsHelper</a>
+  
+    <li><a href="./Task.html">Task</a>
+  
+    <li><a href="./TaskResult.html">TaskResult</a>
+  
+    <li><a href="./TaskTranslation.html">TaskTranslation</a>
+  
+    <li><a href="./TimerOption.html">TimerOption</a>
+  
+    <li><a href="./TimerOptionsHelper.html">TimerOptionsHelper</a>
+  
+    <li><a href="./Tweet.html">Tweet</a>
+  
+    <li><a href="./TwitterCount.html">TwitterCount</a>
+  
+    <li><a href="./TwitterCountsHelper.html">TwitterCountsHelper</a>
+  
+    <li><a href="./TwitterElasticHighspeed.html">TwitterElasticHighspeed</a>
+  
+    <li><a href="./TwitterKeyword.html">TwitterKeyword</a>
+  
+    <li><a href="./TwitterKeywordsController.html">TwitterKeywordsController</a>
+  
+    <li><a href="./TwitterKeywordsHelper.html">TwitterKeywordsHelper</a>
+  
+    <li><a href="./TwitterUrl.html">TwitterUrl</a>
+  
+    <li><a href="./TwitterUser.html">TwitterUser</a>
+  
+    <li><a href="./UptimeMonitor.html">UptimeMonitor</a>
+  
+    <li><a href="./UptimeMonitorsController.html">UptimeMonitorsController</a>
+  
+    <li><a href="./UptimeMonitorsHelper.html">UptimeMonitorsHelper</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WorkQueue.html">WorkQueue</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Organization</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-comps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">comps</span><span
+            class="method-args">(cat_id,lat_lon,distance)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="comps-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 113</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">comps</span>(<span class="ruby-identifier">cat_id</span>,<span class="ruby-identifier">lat_lon</span>,<span class="ruby-identifier">distance</span>)
+   <span class="ruby-constant">Organization</span>.<span class="ruby-identifier">tire</span>.<span class="ruby-identifier">search</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">query</span> { <span class="ruby-identifier">string</span>(<span class="ruby-identifier">cat_id</span>) }
+    <span class="ruby-identifier">size</span> <span class="ruby-value">30</span>
+    <span class="ruby-identifier">filter</span> <span class="ruby-value">:geo_distance</span>, <span class="ruby-identifier">lat_lon</span><span class="ruby-operator">:</span> <span class="ruby-identifier">lat_lon</span>, <span class="ruby-identifier">distance</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{distance}km&quot;</span>
+    <span class="ruby-comment">#raise to_curl</span>
+  <span class="ruby-keyword">end</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- comps-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- comps-method -->
+
+    
+      <div id="method-c-name_like" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">name_like</span><span
+            class="method-args">(query)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def competitors</p>
+
+<pre>organizations</pre>
+
+<p>end</p>
+          
+
+          
+          <div class="method-source-code" id="name_like-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name_like</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;name like ?&quot;</span>, <span class="ruby-node">&quot;%#{query}%&quot;</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- name_like-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- name_like-method -->
+
+    
+      <div id="method-c-names_like" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">names_like</span><span
+            class="method-args">(query)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="names_like-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">names_like</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;name like ?&quot;</span>, <span class="ruby-node">&quot;%#{query}%&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- names_like-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- names_like-method -->
+
+    
+      <div id="method-c-paginate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paginate</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="paginate-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">paginate</span>(<span class="ruby-identifier">options</span> = {})
+     <span class="ruby-identifier">page</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:per_page</span>])
+   <span class="ruby-keyword">end</span></pre>
+          </div><!-- paginate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paginate-method -->
+
+    
+      <div id="method-c-streets_like" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">streets_like</span><span
+            class="method-args">(query)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="streets_like-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">streets_like</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;street like ?&quot;</span>, <span class="ruby-node">&quot;%#{query}%&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- streets_like-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- streets_like-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create_schedule" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_schedule</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_schedule-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_schedule</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">account</span>
+    <span class="ruby-constant">Schedule</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span>, <span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">sequence_id</span><span class="ruby-operator">:</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">in_progress</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">scheduled</span><span class="ruby-operator">:</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">yesterday</span>)
+    <span class="ruby-constant">Schedule</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">sequence_id</span><span class="ruby-operator">:</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;signup&quot;</span>, <span class="ruby-identifier">scheduled</span><span class="ruby-operator">:</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">yesterday</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Schedule</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span>, <span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">sequence_id</span><span class="ruby-operator">:</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">in_progress</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">scheduled</span><span class="ruby-operator">:</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">yesterday</span>)
+  <span class="ruby-constant">Schedule</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;aggregate&quot;</span>, <span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">sequence_id</span><span class="ruby-operator">:</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">in_progress</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-identifier">scheduled</span><span class="ruby-operator">:</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-value">30</span>.<span class="ruby-identifier">minutes</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_schedule-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_schedule-method -->
+
+    
+      <div id="method-i-get_apphera_comps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_apphera_comps</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_apphera_comps-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_apphera_comps</span>
+  <span class="ruby-identifier">client</span> = <span class="ruby-constant">SocialMediaMonitoring</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;ed08eba2bd5ef47bab6cb1944686fed2&quot;</span>)
+  <span class="ruby-identifier">comps</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">competitors</span>(<span class="ruby-constant">Category</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">category</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">apphera_id</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lat_lon</span>)
+  <span class="ruby-comment"># =&gt; cat  = Category.find(self.category_id)#self.category.apphera_id.to_i)</span>
+     <span class="ruby-identifier">comps</span>.<span class="ruby-identifier">response</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+     <span class="ruby-identifier">org</span> = <span class="ruby-constant">Organization</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">street</span><span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">street</span>,<span class="ruby-identifier">postalcode</span><span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">postalcode</span>, <span class="ruby-identifier">city</span><span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">city</span>, <span class="ruby-identifier">phone1</span><span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">phone</span>, <span class="ruby-identifier">category_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">category_id</span>)
+     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">organizations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">org</span>
+     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+ 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_apphera_comps-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_apphera_comps-method -->
+
+    
+      <div id="method-i-lat_lon" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lat_lon</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="lat_lon-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lat_lon</span>
+  [<span class="ruby-identifier">latitude</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">longitude</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lat_lon-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lat_lon-method -->
+
+    
+      <div id="method-i-list_of_reviewers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_of_reviewers</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="list_of_reviewers-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list_of_reviewers</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewers_list</span>.<span class="ruby-identifier">nil?</span>
+     <span class="ruby-identifier">reviewer_ids</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewers</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">id</span>}.<span class="ruby-identifier">flatten</span>
+     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewers_list</span> = <span class="ruby-identifier">reviewer_ids</span>
+     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewers_list</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewers_list</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span></pre>
+          </div><!-- list_of_reviewers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- list_of_reviewers-method -->
+
+    
+      <div id="method-i-to_indexed_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_indexed_json</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <pre class="ruby"><span class="ruby-identifier">scope</span> :<span class="ruby-identifier">near</span>, <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">latitude</span>, <span class="ruby-identifier">longitude</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+   <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dup</span> <span class="ruby-operator">||</span> {}
+   <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reverse_merge!</span>(:<span class="ruby-identifier">range</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
+   <span class="ruby-identifier">where</span>(:<span class="ruby-identifier">id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Tire</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">'organizations'</span>) <span class="ruby-keyword">do</span>
+     <span class="ruby-identifier">filter</span> <span class="ruby-string">'geo_distance'</span>, :<span class="ruby-identifier">distance</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{options[:range]}
+</span></pre>
+
+<p>km“, :<a href="Organization.html#method-i-lat_lon">#lat_lon</a> =&gt;
+[latitude, longitude]</p>
+
+<pre>  end.results.collect(&amp;:id))
+}</pre>
+
+<p>scope :near, Proc.new { |latitude, longitude, options| options = options
+&amp;&amp; options.dup || {} options.reverse_merge!(:range =&gt;1)
+where(:id =&gt; Tire.search(‘Organization’) do</p>
+
+<pre class="ruby"><span class="ruby-identifier">filter</span> <span class="ruby-string">'geo_distance'</span>, :<span class="ruby-identifier">distance</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{options[:range]})}km&quot;</span>,
+:<span class="ruby-identifier">lat_lon</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">latitude</span>, <span class="ruby-identifier">longitude</span>]
+<span class="ruby-keyword">end</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">collect</span>(&amp;:<span class="ruby-identifier">id</span>))
+</pre>
+          
+
+          
+          <div class="method-source-code" id="to_indexed_json-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_indexed_json</span>
+  <span class="ruby-identifier">to_json</span>(<span class="ruby-identifier">methods</span><span class="ruby-operator">:</span> [<span class="ruby-string">'lat_lon'</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_indexed_json-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_indexed_json-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Private Instance Methods</h3>
+
+    
+      <div id="method-i-existing_org" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">existing_org</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="existing_org-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">existing_org</span>
+  <span class="ruby-comment"># code here</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- existing_org-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- existing_org-method -->
+
+    
+      <div id="method-i-gmaps4rails_address" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gmaps4rails_address</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="gmaps4rails_address-source">
+            <pre><span class="ruby-comment"># File app/models/organization.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gmaps4rails_address</span>
+  <span class="ruby-node">&quot;#{self.street}, #{self.city}, Germany}&quot;</span> <span class="ruby-comment">#TODO: Hardcoded country. Thats bad</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gmaps4rails_address-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gmaps4rails_address-method -->
+
+    
+    </section><!-- private-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
