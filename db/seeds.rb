@@ -1447,6 +1447,8 @@ SequenceItem.create!  :id => 22,  :name => "uptime_monitor",  :description => "w
 print "."
 SequenceItem.create!  :id => 23,  :name => "alert_mail",  :description => "send out alert mail"
 print "."
+
+SystemSetting.create! :id => 1, :bunny_host => "127.0.0.1", :bunny_user => "guest", :bunny_password => "guest"
 puts "Done writing sequence items"
  
 puts "completed"

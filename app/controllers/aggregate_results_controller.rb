@@ -1,7 +1,7 @@
 class AggregateResultsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :set_org
-  caches_page :index
+  #caches_page :index
 
   # GET /aggregate_results
   # GET /aggregate_results.json
