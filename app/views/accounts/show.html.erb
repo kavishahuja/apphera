@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= I18n.t("my_account") %>:</b>
   <%= @account.name %>
 </p>
 
 <p>
-  <b>Firstname:</b>
+  <b><%= I18n.t("firstname") %>:</b>
   <%= @account.firstname %>
 </p>
 
 <p>
-  <b>Lastname:</b>
+  <b><%= I18n.t("lastname") %>:</b>
   <%= @account.lastname %>
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b><%= I18n.t("phone") %>:</b>
   <%= @account.phone %>
 </p>
 
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<%= link_to I18n.t("edit"), edit_account_path(@account) %> |
+<%= link_to I18n.t("form_back"), accounts_path %>

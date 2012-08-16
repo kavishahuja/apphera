@@ -1,5 +1,5 @@
-<h1>New recommendation</h1>
+<h1><%= I18n.t("recommendations.new.new_recommendation") %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', recommendations_path %>
+<%= link_to I18n.t("recommendations.new.back"), recommendations_path %>

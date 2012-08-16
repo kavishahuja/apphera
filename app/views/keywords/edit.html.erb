@@ -1,6 +1,6 @@
-<h1>Editing keyword</h1>
+<h1><%= I18n.t("keywords.edit.editing_keyword") %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @keyword %> |
-<%= link_to 'Back', keywords_path %>
+<%= link_to I18n.t("form_edit"), @keyword %> |
+<%= link_to I18n.t("form_back"), keywords_path %>

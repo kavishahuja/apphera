@@ -1,27 +1,27 @@
 <div class="hero-unit">
-  <h3>Auswertungen</h3>
+  <h3><%= I18n.t("analysis_headline") %></h3>
 <!-- start tabs -->
 
 
   <% unless @h.nil? %>
       <%= high_chart("my_id", @h) %>
   <% end %>
-  <a href="#" rel="popover" title="Überblick" data-content="Diese Grafik zeigt Ihnen die durschnittliche Reviewbewertung Ihrer Mitbewerber. Ihr eigener Durschnitt ist:
+  <a href="#" rel="popover" title="Überblick" data-content="<%= I18n.t("competitor_analysis_explaination") %>
 <% unless @aggregate_result.nil? %>	
 <%= @aggregate_result.review_avg %>
-	">Erklärung der Grafik
+	"><%= I18.t("explanation_of_graphic") %>
   </a>
   <% end %>
-  <h3>Durchschnitt aller Mitbewerber Bewertungen :<%= @avg_rating.to_s %></h3>
+  <h3><%= I18n.t("average_competitor_reviews") %> :<%= @avg_rating.to_s %></h3>
   <% unless @aggregate_result.nil? %>
-  <h3>Ihr Bewertungs-Durchschnitt :<%= @aggregate_result.review_avg %></h3>
+  <h3><%= I18n.t("your_review_average") %> :<%= @aggregate_result.review_avg %></h3>
 	<% end %>
   <table class="table">
 
     <tr>
-      <th>Lokation</th>
-      <th>Reviews</th>
-      <th>Review Durchschnitt</th>
+      <th><%= I18n.t("location")%></th>
+      <th><%= I18n.t("reviews")%></th>
+      <th><%= I18n.t("review_average")%></th>
       <!-- <th>Tweets</th>
            <th>Tweets neu</th>
      	  <th>Followers<a href="#" rel="popover" title="Twitter Tip" data-content="Lorem ipsum"><i class="icon-list icon-question-sign"></i></a>	</th>
@@ -30,7 +30,7 @@
            <th>Fb gefällt mir neu<a href="#" rel="popover" title="Facebook Tip" data-content="Lorem ipsum erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'"><i class="icon-list icon-question-sign"></i></a>	</th> -->
 	  <th>Foursquare Users</th>
 	<th>Foursquare Checkins</th>
-	<th>Foursquare Tip<a href="#" rel="popover" title="Foursquare Tip" data-content="Foursquare erm&ouml;glicht seinen Nutzern eine Lokation zu Empfehlen. Diese Empfehlungen nennen sich 'Foursquare Tip'. Wenn Sie viele Foursquare Nutzer in ihrer Lokation haben aber nicht als Tip gelistet sind, empfehlen wir Reviews genauer auszuwerten um herauszufinden warum die Nutzer ihre Lokation nicht empfehlen."><i class="icon-list icon-question-sign"></i></a>	</th>
+	<th>Foursquare Tip<a href="#" rel="popover" title="Foursquare Tip" data-content="<%= I18n.t("foursquare_tip_text") %>"><i class="icon-list icon-question-sign"></i></a>	</th>
       <!--&lt;!&ndash; <th>Mentions</th>-->
  <!--  <th>Mentions neu</th>
    <th>Blog Beiträge</th>
@@ -92,4 +92,3 @@
                 e.preventDefault()
             })
 </script>
-

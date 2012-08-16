@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= I18n.t("recommendations.show.name") %>:</b>
   <%= @recommendation.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%= I18n.t("recommendations.show.description") %>:</b>
   <%= @recommendation.description %>
 </p>
 
 
-<%= link_to 'Back', recommendations_path %>
+<%= link_to I18n.t("recommendations.show.back"), recommendations_path %>

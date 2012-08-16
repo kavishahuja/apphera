@@ -1,4 +1,4 @@
-<h3>Ihre Mitbewerber</h3>
+<h3><%= I18n.t("your_competitors_headline") %></h3>
 
 
 
@@ -13,15 +13,15 @@
 
      <!-- <div id="example" class="k-content">
     	    <div id="grid"></div> -->
-  <a href="/my_competitors/new">Neuen Mitbewerber hinzufügen.</a>
+  <a href="/my_competitors/new"><%= I18n.t("add_competitor") %>.</a>
   <tr>
-    <th>Name</th>
-    <th>Strasse</th>
-    <th>Postleitzahl</th>
-    <th>Stadt</th>
-    <th>Phone</th>
-    <th>Entfernung</th>
-    <th>Entfernen</th>
+    <th><%= I18n.t("name") %></th>
+    <th><%= I18n.t("street") %></th>
+    <th><%= I18n.t("postalcode") %></th>
+    <th><%= I18n.t("city") %></th>
+    <th><%= I18n.t("phone") %></th>
+    <th><%= I18n.t("distance") %></th>
+    <th><%= I18n.t("remove") %></th>
   </tr>
   <% begin %>
       <% @organizations.each do |organization| %>
@@ -36,7 +36,7 @@
             <td><%= organization.city %></td>
             <td><%= organization.phone1 %></td>
             <td><%= organization.distance_to(@org).round(2) rescue nil %> Km</td>
-            <td><%= link_to 'Entfernen', organization, confirm: 'Sind Sie sicher?', method: :delete, :class => 'btn btn-small' %></td>
+            <td><%= link_to I18n.t("remove"), organization, confirm: I18n.t("are_you_sure"), method: :delete, :class => 'btn btn-small' %></td>
           </tr>
       <% end %>
   <% rescue %>
@@ -47,12 +47,7 @@
 <% end %>
 
 <br/>
-<!--</div>-->
-  <!--<div class="tab-pane fade in active" id="profile">-->
-    <!--<div class="well">-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--</div>-->
+
 
   <script type="text/javascript">
     $("a[rel=popover]")
@@ -61,16 +56,4 @@
                 e.preventDefault()
             });
 
-//    $(function () {
-//        $('#home a:last').tab('home');
-//    });
-//    $(function () {
-//        $('#profile a:last').tab('profile');
-//    });
-//    $(function () {
-//    if(window.location.href.indexOf("page") != -1) {
-//        $('#home a:last').tab('home');
-//    }
-//    });
 </script>
-

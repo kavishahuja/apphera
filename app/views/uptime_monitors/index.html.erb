@@ -3,69 +3,69 @@
         <div id="chart"></div>
     </div>
     <script>
-        function createChart() {
+        <%= I18n.t("uptime_monitors.index.function_createchart") %>() {
             $("#chart").kendoChart({
-                theme: $(document).data("kendoSkin") || "default",
-                dataSource: {
-                    transport: {
-                        read: {
-                            url: "uptime_monitors.json",
-                            dataType: "json"
+                <%= I18n.t("uptime_monitors.index.theme") %>: $(document).data("kendoSkin") || "default",
+                <%= I18n.t("uptime_monitors.index.datasource") %>: {
+                    <%= I18n.t("uptime_monitors.index.transport") %>: {
+                        <%= I18n.t("uptime_monitors.index.read") %>: {
+                            <%= I18n.t("uptime_monitors.index.url") %>: "uptime_monitors.json",
+                            <%= I18n.t("uptime_monitors.index.datatype") %>: "json"
                         }
                     },
-                    sort: {
-                        field: "year",
-                        dir: "asc"
+                    <%= I18n.t("uptime_monitors.index.sort") %>: {
+                        <%= I18n.t("uptime_monitors.index.field") %>: "year",
+                        <%= I18n.t("uptime_monitors.index.dir") %>: "asc"
                     }
                 },
-                title: {
-                    text: "Spain electricity production (GWh)"
+                <%= I18n.t("uptime_monitors.index.title") %>: {
+                    <%= I18n.t("uptime_monitors.index.text") %>: "Spain electricity production (GWh)"
                 },
-                legend: {
-                    position: "top"
+                <%= I18n.t("uptime_monitors.index.legend") %>: {
+                    <%= I18n.t("uptime_monitors.index.position") %>: "top"
                 },
-                seriesDefaults: {
-                    type: "area"
+                <%= I18n.t("uptime_monitors.index.seriesdefaults") %>: {
+                    <%= I18n.t("uptime_monitors.index.type") %>: "area"
                 },
-                series: [{
-                        field: "nuclear",
-                        name: "Nuclear"
+                <%= I18n.t("uptime_monitors.index.series") %>: [{
+                        <%= I18n.t("uptime_monitors.index.field") %>: "nuclear",
+                        <%= I18n.t("uptime_monitors.index.name") %>: "Nuclear"
                     }, {
-                        field: "hydro",
-                        name: "Hydro"
+                        <%= I18n.t("uptime_monitors.index.field") %>: "hydro",
+                        <%= I18n.t("uptime_monitors.index.name") %>: "Hydro"
                     }, {
-                        field: "wind",
-                        name: "Wind"
+                        <%= I18n.t("uptime_monitors.index.field") %>: "wind",
+                        <%= I18n.t("uptime_monitors.index.name") %>: "Wind"
                 }],
-                categoryAxis: {
-                    field: "year",
-                    labels: {
-                        rotation: -90
+                <%= I18n.t("uptime_monitors.index.categoryaxis") %>: {
+                    <%= I18n.t("uptime_monitors.index.field") %>: "year",
+                    <%= I18n.t("uptime_monitors.index.labels") %>: {
+                        <%= I18n.t("uptime_monitors.index.rotation") %>: -90
                     }
                 },
-                valueAxis: {
-                    labels: {
-                        format: "{0:N0}"
+                <%= I18n.t("uptime_monitors.index.valueaxis") %>: {
+                    <%= I18n.t("uptime_monitors.index.labels") %>: {
+                        <%= I18n.t("uptime_monitors.index.format") %>: "{0:N0}"
                     },
-                    majorUnit: 10000
+                    <%= I18n.t("uptime_monitors.index.majorunit") %>: 10000
                 },
-                tooltip: {
-                    visible: true,
-                    format: "{0:N0}"
+                <%= I18n.t("uptime_monitors.index.tooltip") %>: {
+                    <%= I18n.t("uptime_monitors.index.visible") %>: true,
+                    <%= I18n.t("uptime_monitors.index.format") %>: "{0:N0}"
                 }
             });
         }
 
         $(document).ready(function() {
-            setTimeout(function() {
-                createChart();
+            <%= I18n.t("uptime_monitors.index.settimeout") %>(function() {
+                <%= I18n.t("uptime_monitors.index.createchart") %>();
 
                 // Initialize the chart with a delay to make sure
                 // the initial animation is visible
             }, 400);
 
             $(document).bind("kendo:skinChange", function(e) {
-                createChart();
+                <%= I18n.t("uptime_monitors.index.createchart") %>();
             });
         });
     </script>

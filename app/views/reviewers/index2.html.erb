@@ -11,10 +11,10 @@
   <div class="tabstrip">
     <ul>
       <li class="k-state-active">
-        Erfahrungsberichte
+        <%= I18n.t("reviewers.index2.erfahrungsberichte") %>
       </li>
       <li>
-        Erfahrungsbericht
+        <%= I18n.t("reviewers.index2.erfahrungsbericht") %>
       </li>
     </ul>
     <div>
@@ -23,7 +23,7 @@
     <div>
       <div class='employee-details'>
         <ul>
-          <li><label>Bericht:</label>#= body #</li>
+          <li><label><%= I18n.t("reviewers.index2.bericht") %>:</label>#= body #</li>
         </ul>
       </div>
     </div>
@@ -33,29 +33,29 @@
 
 <script>
     $(document).ready(function() {
-        var element = $("#grid").kendoGrid({
-            dataSource: {
-                type: "json",
-                transport: {
-                    read: "/reviewers.json"
+        <%= I18n.t("reviewers.index2.var_element") %>= $("#grid").kendoGrid({
+            <%= I18n.t("reviewers.index2.datasource") %>: {
+                <%= I18n.t("reviewers.index2.type") %>: "json",
+                <%= I18n.t("reviewers.index2.transport") %>: {
+                    <%= I18n.t("reviewers.index2.read") %>: "/reviewers.json"
                 },
-                pageSize: 10,
-                serverPaging: false,
-                serverSorting: false
+                <%= I18n.t("reviewers.index2.pagesize") %>: 10,
+                <%= I18n.t("reviewers.index2.serverpaging") %>: false,
+                <%= I18n.t("reviewers.index2.serversorting") %>: false
             },
-            height: 650,
-            sortable: true,
-            pageable: true,
-            detailTemplate: kendo.template($("#template").html()),
-            detailInit: detailInit,
-            dataBound: function() {
-                this.expandRow(this.tbody.find("tr.k-master-row").first());
+            <%= I18n.t("reviewers.index2.height") %>: 650,
+            <%= I18n.t("reviewers.index2.sortable") %>: true,
+            <%= I18n.t("reviewers.index2.pageable") %>: true,
+            <%= I18n.t("reviewers.index2.detailtemplate") %>: kendo.template($("#template").html()),
+            <%= I18n.t("reviewers.index2.detailinit") %>: detailInit,
+            <%= I18n.t("reviewers.index2.databound") %>: function() {
+                <%= I18n.t("reviewers.index2.this") %>.expandRow(this.tbody.find("tr.k-master-row").first());
             },
-            columns: [
+            <%= I18n.t("reviewers.index2.columns") %>: [
                 {
-                    field: "name",
-                    title: "Name",
-                    width: 60
+                    <%= I18n.t("reviewers.index2.field") %>: "name",
+                    <%= I18n.t("reviewers.index2.title") %>: "Name",
+                    <%= I18n.t("reviewers.index2.width") %>: 60
 
                 }
 
@@ -63,12 +63,12 @@
         });
     });
 
-    function detailInit(e) {
-        var detailRow = e.detailRow;
+    <%= I18n.t("reviewers.index2.function_detailinit") %>(e) {
+        <%= I18n.t("reviewers.index2.var_detailrow") %>= e.detailRow;
 
-        detailRow.find(".tabstrip").kendoTabStrip({
-            animation: {
-                open: { effects: "fadeIn" }
+        <%= I18n.t("reviewers.index2.detailrow") %>.find(".tabstrip").kendoTabStrip({
+            <%= I18n.t("reviewers.index2.animation") %>: {
+                <%= I18n.t("reviewers.index2.open") %>: { effects: "fadeIn" }
             }
         });
 
@@ -78,74 +78,74 @@
 
 <script>
     $(document).ready(function() {
-        var element = $("#grid").kendoGrid({
-            dataSource: {
-                type: "json",
-                transport: {
-                    read: "/reviews.json"
+        <%= I18n.t("reviewers.index2.var_element") %>= $("#grid").kendoGrid({
+            <%= I18n.t("reviewers.index2.datasource") %>: {
+                <%= I18n.t("reviewers.index2.type") %>: "json",
+                <%= I18n.t("reviewers.index2.transport") %>: {
+                    <%= I18n.t("reviewers.index2.read") %>: "/reviews.json"
                 },
-                pageSize: 10,
-                serverPaging: true,
-                serverSorting: false
+                <%= I18n.t("reviewers.index2.pagesize") %>: 10,
+                <%= I18n.t("reviewers.index2.serverpaging") %>: true,
+                <%= I18n.t("reviewers.index2.serversorting") %>: false
             },
-            height: 650,
-            sortable: true,
-            pageable: true,
-            detailTemplate: kendo.template($("#template").html()),
-            detailInit: detailInit,
-            dataBound: function() {
-                this.expandRow(this.tbody.find("tr.k-master-row").first());
+            <%= I18n.t("reviewers.index2.height") %>: 650,
+            <%= I18n.t("reviewers.index2.sortable") %>: true,
+            <%= I18n.t("reviewers.index2.pageable") %>: true,
+            <%= I18n.t("reviewers.index2.detailtemplate") %>: kendo.template($("#template").html()),
+            <%= I18n.t("reviewers.index2.detailinit") %>: detailInit,
+            <%= I18n.t("reviewers.index2.databound") %>: function() {
+                <%= I18n.t("reviewers.index2.this") %>.expandRow(this.tbody.find("tr.k-master-row").first());
             },
-            columns: [
+            <%= I18n.t("reviewers.index2.columns") %>: [
                 {
-                    field: "review_date",
-                    title: "Vom",
-                    width: 60
+                    <%= I18n.t("reviewers.index2.field") %>: "review_date",
+                    <%= I18n.t("reviewers.index2.title") %>: "Vom",
+                    <%= I18n.t("reviewers.index2.width") %>: 60
 
                 },
                 {
-                    title:"Nutzer",
-                    field: "reviewer.name"
+                    <%= I18n.t("reviewers.index2.title") %>:"Nutzer",
+                    <%= I18n.t("reviewers.index2.field") %>: "reviewer.name"
                 },
                 {
-                    title:"Titel",
-                    field: "title"
+                    <%= I18n.t("reviewers.index2.title") %>:"Titel",
+                    <%= I18n.t("reviewers.index2.field") %>: "title"
                 },
                 {
-                    field: "rating",
-                    title: "*",
-                    width: 30
+                    <%= I18n.t("reviewers.index2.field") %>: "rating",
+                    <%= I18n.t("reviewers.index2.title") %>: "*",
+                    <%= I18n.t("reviewers.index2.width") %>: 30
 
                 }
             ]
         });
     });
 
-    function detailInit(e) {
-        var detailRow = e.detailRow;
+    <%= I18n.t("reviewers.index2.function_detailinit") %>(e) {
+        <%= I18n.t("reviewers.index2.var_detailrow") %>= e.detailRow;
 
-        detailRow.find(".tabstrip").kendoTabStrip({
-            animation: {
-                open: { effects: "fadeIn" }
+        <%= I18n.t("reviewers.index2.detailrow") %>.find(".tabstrip").kendoTabStrip({
+            <%= I18n.t("reviewers.index2.animation") %>: {
+                <%= I18n.t("reviewers.index2.open") %>: { effects: "fadeIn" }
             }
         });
 
-        detailRow.find(".reviews").kendoGrid({
-            dataSource: {
-                type: "json",
-                transport: {
-                    read: "/reviews.json"
+        <%= I18n.t("reviewers.index2.detailrow") %>.find(".reviews").kendoGrid({
+            <%= I18n.t("reviewers.index2.datasource") %>: {
+                <%= I18n.t("reviewers.index2.type") %>: "json",
+                <%= I18n.t("reviewers.index2.transport") %>: {
+                    <%= I18n.t("reviewers.index2.read") %>: "/reviews.json"
                 },
-                serverPaging: false,
-                serverSorting: true,
-                serverFiltering: true,
-                pageSize:10,
-                filter: { field: "reviewer_id", operator: "eq", value: e.data.reviewer_id }
+                <%= I18n.t("reviewers.index2.serverpaging") %>: false,
+                <%= I18n.t("reviewers.index2.serversorting") %>: true,
+                <%= I18n.t("reviewers.index2.serverfiltering") %>: true,
+                <%= I18n.t("reviewers.index2.pagesize") %>:10,
+                <%= I18n.t("reviewers.index2.filter") %>: { field: "reviewer_id", operator: "eq", value: e.data.reviewer_id }
             },
-            scrollable: false,
-            sortable: true,
-            pageable: true,
-            columns: [
+            <%= I18n.t("reviewers.index2.scrollable") %>: false,
+            <%= I18n.t("reviewers.index2.sortable") %>: true,
+            <%= I18n.t("reviewers.index2.pageable") %>: true,
+            <%= I18n.t("reviewers.index2.columns") %>: [
                 { field: "name", width: 70 }
 
             ]
@@ -155,17 +155,17 @@
 <style scoped="scoped">
     .employee-details ul
     {
-        list-style:none;
-        font-style:italic;
-        margin-bottom: 20px;
+        <%= I18n.t("reviewers.index2.list") %>-style:none;
+        <%= I18n.t("reviewers.index2.font") %>-style:italic;
+        <%= I18n.t("reviewers.index2.margin") %>-bottom: 20px;
     }
 
     .employee-details label
     {
-        display:inline-block;
-        width:90px;
-        font-style:normal;
-        font-weight:bold;
+        <%= I18n.t("reviewers.index2.display") %>:inline-block;
+        <%= I18n.t("reviewers.index2.width") %>:90px;
+        <%= I18n.t("reviewers.index2.font") %>-style:normal;
+        <%= I18n.t("reviewers.index2.font") %>-weight:bold;
     }
 </style>
 </div>

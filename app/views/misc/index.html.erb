@@ -1,14 +1,14 @@
-<h3>Bisher gefundene Links</h3>
+<h3><%= I18n.t("misc.index.bisher_gefundene_links") %></h3>
 
 <style>
- table { table-layout: fixed; }
- table th, table td { overflow: hidden; }
+ <%= I18n.t("misc.index.table") %>{ table-layout: fixed; }
+ <%= I18n.t("misc.index.table_th_table_td") %>{ overflow: hidden; }
 </style>
 <table class="table table-striped">
   <tr>
-    <th>Titel</th>
-    <th>Link</th>
-    <th>Beschreibung</th>
+    <th><%= I18n.t("misc.index.titel") %></th>
+    <th><%= I18n.t("misc.index.link") %></th>
+    <th><%= I18n.t("misc.index.beschreibung") %></th>
   </tr>
   <% @links.each do |link| %>
       <tr>
@@ -21,4 +21,3 @@
   <% end %>
 </table>
 <br/>
-

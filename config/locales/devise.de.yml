@@ -50,6 +50,7 @@ de:
         mir der Sie die Änderung Ihrer E-Mail-Adresse abschließen können.
       updated: Ihre Daten wurden aktualisiert.
     sessions:
+      new.signed_in: Bitte loggen Sie sich ein    
       signed_in: Erfolgreich angemeldet.
       signed_out: Erfolgreich abgemeldet.
     unlocks:

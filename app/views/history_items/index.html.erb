@@ -1,11 +1,11 @@
-<h3>Historie</h3>
+<h3><%= I18n.t("history_items.index.historie") %></h3>
 
 <table class = "table table-striped">
   <tr>
-    <th>User</th>
-    <th>Beschreibung</th>
-    <th>Firma</th>
-    <th>Datum</th>
+    <th><%= I18n.t("history_items.index.user") %></th>
+    <th><%= I18n.t("history_items.index.beschreibung") %></th>
+    <th><%= I18n.t("history_items.index.firma") %></th>
+    <th><%= I18n.t("history_items.index.datum") %></th>
     <th></th>
   </tr>
 
@@ -23,4 +23,3 @@
 
 <br/>
 <%= paginate @history_items%>
-

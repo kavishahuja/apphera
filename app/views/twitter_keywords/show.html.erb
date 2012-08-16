@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= I18n.t("twitter_keyword_name") %>:</b>
   <%= @twitter_keyword.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_twitter_keyword_path(@twitter_keyword) %> |
-<%= link_to 'Back', twitter_keywords_path %>
+<%= link_to I18n.t("edit"), edit_twitter_keyword_path(@twitter_keyword) %> |
+<%= link_to I18n.t("form_back"), twitter_keywords_path %>

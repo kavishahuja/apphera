@@ -5,18 +5,18 @@
 <%= simple_form_for(@organization) do |f| %>
   
  <%= f.input :name %>
- <%= f.input :street, :label => "Strasse und Hausnummer" %>
- <%= f.input :street2, :label => "Strassen Zusatz" %>
- <%= f.input :postalcode, :label => "Postleitzahl" %>
- <%= f.input :city, :label => "Stadt" %>
- <%= f.input :phone1, :label => "Telefon" %>
- <%= f.input :phone2, :label => "Mobil" %>
- <%=  f.label "Branche" %>
+ <%= f.input :street, :label => I18n.t("street_and_number") %>
+ <%= f.input :street2, :label => I18n.t("street_additions") %>
+ <%= f.input :postalcode, :label => I18n.t("postalcode") %>
+ <%= f.input :city, :label => I18n.t("city") %>
+ <%= f.input :phone1, :label => I18n.t("phone") %>
+ <%= f.input :phone2, :label => I18n.t("mobile_phone") %>
+ <%=  f.label I18n.t("category") %>
  <%= f.collection_select :category_id, @categories, :id, :name, include_blank: true %>
- <%= f.input :url, :label => "Web Url" %>
- <%= f.input :facebook, :placeholder => 'z.B. www.facebook.com/Firma', :label => "Geschäfts-Facebook Page"  %>
-        <%= f.input :twitter,:placeholder => 'z.B. twitter.com/meineFirma', :label => "Twitter Addresse" %>
- <%= f.button :submit, :caption => "Abspeichern"%>
+ <%= f.input :url, :label => I18n.t("web_url") %>
+ <%= f.input :facebook, :placeholder => I18n.t("fb_example"), :label => I18n.t("fb_page")  %>
+ <%= f.input :twitter,:placeholder => I18n.t("tw_example"), :label => I18n.t("tw_page") %>
+ <%= f.button :submit, :caption => I18n.t("save")%>
 <% end %>
 <% end %>
  

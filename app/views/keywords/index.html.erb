@@ -1,4 +1,5 @@
-<h3>Ihre Suchbegriffe</h3>
+<h3><legend><%= I18n.t("keywords_explanation")%> (z.B. "<%=@org.category.name %> in <%=@org.city %>" <%= I18n.t("or") %> "<%= @org.category.name %> <%= I18n.t("in_the") %> <%= @org.street.gsub!(/[0-9]/, '').strip
+	 %>")</legend></h3>
 
 
 <table class="table table-striped">
@@ -11,12 +12,12 @@
       <tr>
 
         <td><%= link_to keyword.name, keyword %></td>
-        <td><%= link_to 'Such-Ergebnisse anzeigen', keyword %></td>
-        <td><%= link_to 'Entfernen', keyword, confirm: 'Sind Sie sicher das Sie den Suchbegriff entfernen möchten?', method: :delete %></td>
+        <td><%= link_to I18n.t("keyword_results"), keyword %></td>
+        <td><%= link_to I18n.t("remove"), keyword, confirm: I18n.t("remove_the_keyword_confirmation") , method: :delete %></td>
       </tr>
   <% end %>
 </table>
 
 <br/>
 
-<%= link_to 'Neuen Suchbegriff hinzufügen', new_keyword_path, :class => "btn" %>
+<%= link_to I18n.t("save_keyword"), new_keyword_path, :class => "btn" %>

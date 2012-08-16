@@ -1,7 +1,7 @@
 <%= form_for @keyword , :html => { :class => 'form-horizontal' } do |f| %>
     <% if @keyword.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@keyword.errors.count, "error") %> prohibited this keyword from being saved:</h2>
+          <h2><%= pluralize(@keyword.errors.count, "error") %> <%= I18n.t("keyword_cant_be_saved") %>:</h2>
 
           <ul>
             <% @keyword.errors.full_messages.each do |msg| %>
@@ -11,18 +11,18 @@
         </div>
     <% end %>
  <fieldset>
-    <legend>Bitte fügen Sie einen neuen Suchbegriff (Keyword) hinzu. Suchbegriffe sollten so formuliert werden, wie Internet Nutzer nach ihnen suchen würden. (z.B. "<%=@org.category.name %> in <%=@org.city %>" oder "<%= @org.category.name %> in der <%= @org.street.gsub!(/[0-9]/, '').strip
-	 %>")</legend>
+    <legend><%= I18n.t("keywords_explanation")%> (z.B. "<%=@org.category.name %> in <%=@org.city %>" <%= I18n.t("or") %> "<%= @org.category.name %> <%= I18n.t("in_the") %> <%= @org.street.gsub!(/[0-9]/, '').strip
+		 %>")</legend>
 
     <div class="control-group">
-      Suchbegriff(Keyword):
+      <%= I18n.t("keyword") %>(Keyword):
  <div class="controlls">
       <%= f.text_field :name, :class => 'text_field' %>
     </div>
 </div>
     <div class="form-actions">
-      <%= f.submit 'Hinzufügen', :class => 'btn-primary' %>
-		<%= link_to 'Abbrechen', keywords_path, :class => 'btn' %>
+      <%= f.submit I18n.t("add_keyword"), :class => 'btn primary' %>
+		<%= link_to I18n.t("abbort"), keywords_path, :class => 'btn' %>
     </div>
 </fieldset>
 <% end %>

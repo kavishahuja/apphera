@@ -1,11 +1,11 @@
-<h1>Listing rankings</h1>
+<h1><%= I18n.t("rankings.index.listing_rankings") %></h1>
 
 <table>
   <tr>
-    <th>Rank</th>
-    <th>Content provider</th>
-    <th>Keyword</th>
-    <th>Url</th>
+    <th><%= I18n.t("rankings.index.rank") %></th>
+    <th><%= I18n.t("rankings.index.content_provider") %></th>
+    <th><%= I18n.t("rankings.index.keyword") %></th>
+    <th><%= I18n.t("rankings.index.url") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,9 +18,9 @@
             <td><%= ranking.name %></td>
             <td><%= ranking.keyword.name %></td>
             <td><%= ranking.url %></td>
-            <td><%= link_to 'Show', ranking %></td>
-            <td><%= link_to 'Edit', edit_ranking_path(ranking) %></td>
-            <td><%= link_to 'Entfernen', ranking, confirm: 'Sind Sie sicher das Sie den Suchbegriff entfernen moechten? ', method: :delete %></td>
+            <td><%= link_to I18n.t("rankings.index.show"), ranking %></td>
+            <td><%= link_to I18n.t("rankings.index.edit"), edit_ranking_path(ranking) %></td>
+            <td><%= link_to I18n.t("rankings.index.entfernen"), ranking, confirm: 'Sind Sie sicher das Sie den Suchbegriff entfernen moechten? ', method: :delete %></td>
           </tr>
       <% end %>
   <% end %>

@@ -71,5 +71,7 @@ gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'foursquare2'
 gem 'degermatize'
 gem 'twilio-ruby'
+gem 'kaminari-i18n'
+
 
 

@@ -1,8 +1,8 @@
-<h4>Twitter Keywords</h4>
+<h4><%= I18n.t("twitter_keywords") %></h4>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= I18n.t("twitter_keywords_index") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @twitter_keywords.each do |twitter_keyword| %>
   <tr>
     <td><%= twitter_keyword.name %></td>
-    <td><%= link_to 'Show', twitter_keyword %></td>
-    <td><%= link_to 'Edit', edit_twitter_keyword_path(twitter_keyword) %></td>
-    <td><%= link_to 'Destroy', twitter_keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to I18n.t("show"), twitter_keyword %>|</td>
+    <td><%= link_to I18n.t("edit"), edit_twitter_keyword_path(twitter_keyword) %>|</td>
+    <td><%= link_to I18n.t("delete"), twitter_keyword, method: :delete, data: { confirm: I18n.t("confirm_delete") } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Twitter keyword', new_twitter_keyword_path %>
+<%= link_to I18n.t("new_twitter_keyword"), new_twitter_keyword_path %>

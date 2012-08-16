@@ -1,73 +1,73 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Bunny host:</b>
+  <b><%= I18n.t("bunny_host") %>:</b>
   <%= @system_setting.bunny_host %>
 </p>
 
 <p>
-  <b>Bunny user:</b>
+  <b><%= I18n.t("bunny_user") %>:</b>
   <%= @system_setting.bunny_user %>
 </p>
 
 <p>
-  <b>Bunny password:</b>
+  <b><%= I18n.t("bunny_password") %>:</b>
   <%= @system_setting.bunny_password %>
 </p>
 
 <p>
-  <b>Twitter consumer key:</b>
+  <b><%= I18n.t("twitter_consumer_key") %>:</b>
   <%= @system_setting.twitter_consumer_key %>
 </p>
 
 <p>
-  <b>Twitter consumer secret:</b>
+  <b><%= I18n.t("twitter_consumer_secret") %>:</b>
   <%= @system_setting.twitter_consumer_secret %>
 </p>
 
 <p>
-  <b>Twitter oauth token:</b>
+  <b><%= I18n.t("twitter_oauth_token") %>:</b>
   <%= @system_setting.twitter_oauth_token %>
 </p>
 
 <p>
-  <b>Twitter oauth token secret:</b>
+  <b><%= I18n.t("twitter_oauth_token_secret") %>:</b>
   <%= @system_setting.twitter_oauth_token_secret %>
 </p>
 
 <p>
-  <b>Facebook api key:</b>
+  <b><%= I18n.t("facebook_api_key") %>:</b>
   <%= @system_setting.facebook_api_key %>
 </p>
 
 <p>
-  <b>Facebook api secret:</b>
+  <b><%= I18n.t("facebook_api_secret") %>:</b>
   <%= @system_setting.facebook_api_secret %>
 </p>
 
 <p>
-  <b>Foursquare client id:</b>
+  <b><%= I18n.t("foursquare_client_id") %>:</b>
   <%= @system_setting.foursquare_client_id %>
 </p>
 
 <p>
-  <b>Foursquare api secret:</b>
+  <b><%= I18n.t("foursquare_api_secret") %>:</b>
   <%= @system_setting.foursquare_client_secret %>
 </p>
 
 <p>
-  <b>Bing api key:</b>
+  <b><%= I18n.t("bing_api_key") %>:</b>
   <%= @system_setting.bing_api_key %>
 </p>
 
 <p>
-  <b>Google api key:</b>
+  <b><%= I18n.t("google_api_key") %>:</b>
   <%= @system_setting.google_api_key %>
 </p>
 <p>
-  <b>Bigproxy:</b>
+  <b><%= I18n.t("bigproxy") %>:</b>
   <%= @system_setting.best_proxy_password %>
 </p>
 
 
-<%= link_to 'Edit', edit_system_setting_path(@system_setting) %> 
+<%= link_to I18n.t("edit_form"), edit_system_setting_path(@system_setting) %> 

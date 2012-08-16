@@ -5,7 +5,7 @@ class RecommendationsController < ApplicationController
   # GET /recommendations.json
   def index
     unless @org
-      redirect_to new_account_path, :notice => 'Bitte fuegen Sie eine Niederlassung oder Filiale hinzu.' and return
+      redirect_to new_account_path, :notice => I18n.t("please_add_location") and return
     end
     @recommendations = Recommendation.all
 

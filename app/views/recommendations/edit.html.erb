@@ -1,6 +1,6 @@
-<h1>Editing recommendation</h1>
+<h1><%= I18n.t("recommendations.edit.editing_recommendation") %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @recommendation %> |
-<%= link_to 'Back', recommendations_path %>
+<%= link_to I18n.t("recommendations.edit.show"), @recommendation %> |
+<%= link_to I18n.t("recommendations.edit.back"), recommendations_path %>

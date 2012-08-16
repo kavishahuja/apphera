@@ -4,7 +4,7 @@ development:
   database: apphera_community_development
   pool: 5
   username: root
-  password: hallo123
+  password: 
   host: 127.0.0.1
 
 production:

@@ -1,6 +1,6 @@
-<h4>Editing Twitter Keyword</h4>
+<h4><%= I18n.t("editing_twitter_keyword") %></h4>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @twitter_keyword %> |
-<%= link_to 'Back', twitter_keywords_path %>
+<%= link_to I18n.t("form_show"), @twitter_keyword %> |
+<%= link_to I18n.t("form_back"), twitter_keywords_path %>

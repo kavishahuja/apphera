@@ -8,12 +8,12 @@
       <hr/>
       <h3>Wichtige Benachrichtigungen f&uuml;r <%= @org.name %>, <%= @org.street %>, <%= @org.city %></h3>
       <hr/>
-      <h4>Tests:</h4>
+      <h4><%= I18n.t("home_dashboard_tests") %>:</h4>
       <table class="table table-striped">
         <tr>
           <th></th>
-          <th>Name</th>
-          <th>Erklärung</th>
+          <th><%= I18n.t("home_dashboard_name") %></th>
+          <th><%= I18n.t("task_explanation") %></th>
 
           <th></th>
           <th></th>
@@ -25,15 +25,15 @@
                 <% unless t.status.nil? %>
                     <% case t.status %>
                 <% when 0 %>
-                        <span class="label label-info">Nicht getestet</span>
+                        <span class="label label-info"><%= I18n.t("test_not_tested") %></span>
                     <% when 1 %>
-                        <span class="label label-important">Nicht Komplett</span>
+                        <span class="label label-important"><%= I18n.t("test_not_complete") %></span>
                     <% when 2 %>
-                        <span class="label label-warning">Informiert</span>
+                        <span class="label label-warning"><%= I18n.t("test_already_notified") %></span>
                     <% when 3 %>
-                        <span class="label label-important">In Bearbeitung</span>
+                        <span class="label label-important"><%= I18n.t("test_in_progress") %></span>
                     <% when 4 %>
-                        <span class="label label-success">Komplett!</span>
+                        <span class="label label-success"><%= I18n.t("test_completed") %>!</span>
                     <% else %>
                     <% end %>
                 <% end %>
@@ -57,12 +57,12 @@
               <!--<a class="btn btn-important dropdown-toggle" data-toggle="dropdown" href="#">Todo-->
               <!--<span class="caret"></span></a>-->
               <!--<ul class="dropdown-menu">-->
-              <!--<li><a href="#">Akzeptieren</a></li>-->
-              <!--<li><a href="#">Delegieren</a></li>-->
-              <!--<li><a href="#">Löschen</a></li>-->
-              <!--<li><a href="#">Bearbeiten</a></li>-->
+              <!--<li><a href="#"><%= I18n.t("home.dashboard.akzeptieren") %></a></li>-->
+              <!--<li><a href="#"><%= I18n.t("home.dashboard.delegieren") %></a></li>-->
+              <!--<li><a href="#"><%= I18n.t("home.dashboard.löschen") %></a></li>-->
+              <!--<li><a href="#"><%= I18n.t("home.dashboard.bearbeiten") %></a></li>-->
               <!--<li class="divider"></li>-->
-              <!--<li><a href="#">Wiedervorlage</a></li>-->
+              <!--<li><a href="#"><%= I18n.t("home.dashboard.wiedervorlage") %></a></li>-->
               <!--</ul>-->
               <!--</div>-->
               <!-- /btn-group -->
@@ -73,10 +73,10 @@
         <% end %>
   <% else %>
       <% if current_user.account.nil? %>
-          <h5>Sie muessen zuerst <a href="accounts/new"> Ihren Account Einrichten</a>
+          <h5>Sie muessen zuerst <a href="accounts/new"> <%= I18n.t("home.dashboard.ihren_account_einrichten") %></a>
       <% else %>
           <h5>Sie muessen Ihrem Account zuerst
-            <a href="organizations/new"> eine oder mehrere Niederlassungen hinzuf&uuml;gen.</a></h5>
+            <a href="organizations/new"> <%= I18n.t("home.dashboard.eine_oder_mehrere_niederlassungen_hinzuf&uumlgen") %>.</a></h5>
       <% end %>
   <% end %>
   </table>

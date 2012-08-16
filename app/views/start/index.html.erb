@@ -1,5 +1,5 @@
-<div class="header"></div><h2>Social Media Monitoring war noch nie so einfach, übersichtlich und preiswert. <span class="green"> Derzeit in privatem beta Test, demnächst deutschlandweit verfügbar.</span> </h2><br />
-	      <a class="btn-success btn-primary btn-large success" href="/contacts/new">Agentur Anfragen</a>  </div>
+<div class="header"></div><h2>Social Media Monitoring war noch nie so einfach, übersichtlich und preiswert. <span class="green"> <%= I18n.t("start.index.derzeit_in_privatem_beta_test_demnächst_deutschlandweit_verfügbar") %>.</span> </h2><br />
+	      <a class="btn-success btn-primary btn-large success" href="/contacts/new"><%= I18n.t("start.index.agentur_anfragen") %></a>  </div>
 
 <div class="row">
 	<div class="span4">
@@ -15,44 +15,44 @@
 <div class="row">
 
     <div class="span4">
-      <h2>Ihre Vorteile als Unternehmer</h2>
+      <h2><%= I18n.t("start.index.ihre_vorteile_als_unternehmer") %></h2>
 
-       <p>Apphera ist der erste deutsche Anbieter für Social Media Monitoring und Online Reputation Management für lokale Unternehmen wie Restaurants, Hotels, Freizeitunternehmen und Ladengeschäfte.</p>
+       <p><%= I18n.t("start.index.apphera_ist_der_erste_deutsche_anbieter_für_social_media_monitoring_und_online_reputation_management_für_lokale_unternehmen_wie_restaurants_hotels_freizeitunternehmen_und_ladengeschäfte") %>.</p>
 <h4>
 <ul>
 <li>
-	Wer spricht über Sie und was wird gesagt?
+	<%= I18n.t("start.index.wer_spricht_über_sie_und_was_wird_gesagt") %>?
 	</li>
 	<li>
-	Werden Sie auf Suchmaschinen problemlos gefunden?
+	<%= I18n.t("start.index.werden_sie_auf_suchmaschinen_problemlos_gefunden") %>?
 	</li>
 	<li>
-	Erhalten Sie automatische Benachrichtigungen bei wichtigen Ereignissen!
+	<%= I18n.t("start.index.erhalten_sie_automatische_benachrichtigungen_bei_wichtigen_ereignissen") %>!
 	</li>
 	<li>
-	Sie erhalten einfachste und zeitnahe Informationen und Beobachtungen über Ihre Mitbewerber!
+	<%= I18n.t("start.index.sie_erhalten_einfachste_und_zeitnahe_informationen_und_beobachtungen_über_ihre_mitbewerber") %>!
 	</li>
 	<li>
-	Wir senden Ihnen automatisch individuelle, klare und einfach zu befolgende Tipps, wie Sie online mehr Kunden gewinnen können!
+	<%= I18n.t("start.index.wir_senden_ihnen_automatisch_individuelle_klare_und_einfach_zu_befolgende_tipps_wie_sie_online_mehr_kunden_gewinnen_können") %>!
 </li>
 	
 </ul>
 </h4>	
-      <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+      <!-- <p><a class="btn" href="#"><%= I18n.t("start.index.view_details_&raquo") %></a></p> -->
     </div>
     <div class="span4">
-      <h2>Social Netzwetter. Ein kleiner Vorgeschmack</h2>
-<a href="/home/network">Hier geht es zum Netzwetter</a>
-       <p>Appheras Netzwerk befindet sich gerade im Testbetrieb. Wir dachten, es wäre eine gute Idee, unsere Ergebnisse mit Ihnen zu teilen. So ist unser Netzwetter entstanden. Hier analysieren wir Millionen von User-Beiträgen im deutschsprachigen Internet, um Stimmungsbilder zu erhalten. Diese und andere Leistungen werden Ihnen und Ihrem Unternehmen in naher Zukunft zur Verfügung stehen. Als Mitglied erhalten Sie einen Echtzeit-überblick! Was wird zum Beispiel in diesem Moment direkt über Ihr Unternehmen gesprochen? Werden Reviews hinterlassen? Wie hoch ist der Grad des Einflusses des Reviewers? Diese und noch mehr wichtige Informationen werden Ihnen in einfach zu lesenden Grafiken und übersichten gezeigt. - Bei uns ist kein Marketing Studium notwendig! </p>
-      <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
+      <h2><%= I18n.t("start.index.social_netzwetter_ein_kleiner_vorgeschmack") %></h2>
+<a href="/home/network"><%= I18n.t("start.index.hier_geht_es_zum_netzwetter") %></a>
+       <p><%= I18n.t("start.index.appheras_netzwerk_befindet_sich_gerade_im_testbetrieb_wir_dachten_es_wäre_eine_gute_idee_unsere_ergebnisse_mit_ihnen_zu_teilen_so_ist_unser_netzwetter_entstanden_hier_analysieren_wir_millionen_von_user-beiträgen_im_deutschsprachigen_internet_um_stimmungsbilder_zu_erhalten_diese_und_andere_leistungen_werden_ihnen_und_ihrem_unternehmen_in_naher_zukunft_zur_verfügung_stehen_als_mitglied_erhalten_sie_einen_echtzeit-überblick_was_wird_zum_beispiel_in_diesem_moment_direkt_über_ihr_unternehmen_gesprochen_werden_reviews_hinterlassen_wie_hoch_ist_der_grad_des_einflusses_des_reviewers_diese_und_noch_mehr_wichtige_informationen_werden_ihnen_in_einfach_zu_lesenden_grafiken_und_übersichten_gezeigt_-_bei_uns_ist_kein_marketing_studium_notwendig") %>! </p>
+      <!-- <p><a class="btn" href="#"><%= I18n.t("start.index.view_details_&raquo") %></a></p> -->
    </div>
     <div class="span4">
-      <h2>Agenturen und Reseller</h2><br />
+      <h2><%= I18n.t("start.index.agenturen_und_reseller") %></h2><br />
 <div class="well">
 <h4>
-      <p>Haben Sie Interesse daran bereits zum Start als Partner/Wiederverkäufer mit dabei zu sein? Dann kontaktieren Sie uns bitte. Wir bieten Co-Branding- und Wiederverkäufer-Möglichkeiten.</p></h4>
+      <p><%= I18n.t("start.index.haben_sie_interesse_daran_bereits_zum_start_als_partner_wiederverkäufer_mit_dabei_zu_sein_dann_kontaktieren_sie_uns_bitte_wir_bieten_co-branding-_und_wiederverkäufer-möglichkeiten") %>.</p></h4>
 <br />
-      <p><a class="btn-success btn-primary btn-large success" href="/contacts/new">Agentur Anfragen</a></p>
+      <p><a class="btn-success btn-primary btn-large success" href="/contacts/new"><%= I18n.t("start.index.agentur_anfragen") %></a></p>
 </div>
         </div>
     <!--</div>-->

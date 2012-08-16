@@ -7,7 +7,7 @@ class ReviewersController < InheritedResources::Base
   def index
 
     unless @org
-      redirect_to new_account_path, :notice => t(:please_add_location) and return
+      redirect_to new_account_path, :notice => I18n.t("please_add_location") and return
     end
 
     # begin

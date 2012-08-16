@@ -1,22 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Rank:</b>
+  <b><%= I18n.t("rankings.show.rank") %>:</b>
   <%= @ranking.rank %>
 </p>
 
 <p>
-  <b>Content provider:</b>
+  <b><%= I18n.t("rankings.show.content_provider") %>:</b>
   <%= @ranking.content_provider_id %>
 </p>
 
 <p>
-  <b>Organization:</b>
+  <b><%= I18n.t("rankings.show.organization") %>:</b>
   <%= @ranking.organization_id %>
 </p>
 
 <p>
-  <b>Keyword:</b>
+  <b><%= I18n.t("rankings.show.keyword") %>:</b>
   <%= @ranking.keyword_id %>
 </p>
-

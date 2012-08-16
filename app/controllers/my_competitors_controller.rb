@@ -16,7 +16,7 @@ class MyCompetitorsController < ApplicationController
 
     if @no.save
       respond_to do |format|
-        format.html { redirect_to organizations_url, notice: 'Vielen Dank! Bitte erlauben Sie bis zu 24 Stunden bis wir den Mitbewerber eingepflegt haben' }
+        format.html { redirect_to organizations_url, notice: I18n.t("please_allow_24h") }
       end
     else
       # This line overrides the default rendering behavior, which

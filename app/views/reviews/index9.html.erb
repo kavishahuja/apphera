@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bewertungen</title>
+  <title><%= I18n.t("reviews.index9.bewertungen") %></title>
 </head>
 <body>
   <h4>Bewertungen für <%= @org.name %></h4>
@@ -10,49 +10,49 @@
   <script>
       $(document).ready(function() {
           $("#grid").kendoGrid({
-              dataSource: {
-                  type: "json",
-                  transport: {
-                      read: "/reviews.json"
+              <%= I18n.t("reviews.index9.datasource") %>: {
+                  <%= I18n.t("reviews.index9.type") %>: "json",
+                  <%= I18n.t("reviews.index9.transport") %>: {
+                      <%= I18n.t("reviews.index9.read") %>: "/reviews.json"
                   },
-                  schema: {
-                      model: {
-                          fields: {
-                              review_date: { type: "string" },
+                  <%= I18n.t("reviews.index9.schema") %>: {
+                      <%= I18n.t("reviews.index9.model") %>: {
+                          <%= I18n.t("reviews.index9.fields") %>: {
+                              <%= I18n.t("reviews.index9.review") %>_date: { type: "string" },
 
-                              body: { type: "string" },
-                              reviewer: {name: {type: "string"}},
-                              rating: { type: "string"}
+                              <%= I18n.t("reviews.index9.body") %>: { type: "string" },
+                              <%= I18n.t("reviews.index9.reviewer") %>: {name: {type: "string"}},
+                              <%= I18n.t("reviews.index9.rating") %>: { type: "string"}
                           }
                       }
                   },
-                  pageSize: 10,
-                  serverPaging: false,
-                  serverFiltering: true,
-                  serverSorting: true
+                  <%= I18n.t("reviews.index9.pagesize") %>: 10,
+                  <%= I18n.t("reviews.index9.serverpaging") %>: false,
+                  <%= I18n.t("reviews.index9.serverfiltering") %>: true,
+                  <%= I18n.t("reviews.index9.serversorting") %>: true
               },
-              height: 850,
-              filterable: true,
-              sortable: true,
-              pageable: true,
-              columns: [
+              <%= I18n.t("reviews.index9.height") %>: 850,
+              <%= I18n.t("reviews.index9.filterable") %>: true,
+              <%= I18n.t("reviews.index9.sortable") %>: true,
+              <%= I18n.t("reviews.index9.pageable") %>: true,
+              <%= I18n.t("reviews.index9.columns") %>: [
                   {
-                      field:"review_date".toString(),
-                      width: 60,
-                      title: "Vom:"
+                      <%= I18n.t("reviews.index9.field") %>:"review_date".toString(),
+                      <%= I18n.t("reviews.index9.width") %>: 60,
+                      <%= I18n.t("reviews.index9.title") %>: "Vom:"
                   },
                   { field: "reviewer.name",
-              width: 100,
-               title: "Name"}
+              <%= I18n.t("reviews.index9.width") %>: 100,
+               <%= I18n.t("reviews.index9.title") %>: "Name"}
                   ,{
-                  field:"body",
-                  filterable: true,
-                  title: "Bewertungstext"
+                  <%= I18n.t("reviews.index9.field") %>:"body",
+                  <%= I18n.t("reviews.index9.filterable") %>: true,
+                  <%= I18n.t("reviews.index9.title") %>: "Bewertungstext"
               },
                   { field: "rating",
-                  filterable: false,
-                  width: 30,
-                  title: "*"}
+                  <%= I18n.t("reviews.index9.filterable") %>: false,
+                  <%= I18n.t("reviews.index9.width") %>: 30,
+                  <%= I18n.t("reviews.index9.title") %>: "*"}
               ]
           });
       });

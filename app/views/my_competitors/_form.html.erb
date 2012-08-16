@@ -12,7 +12,7 @@
   </div>
 
     <div class="form-actions">
-      <%= f.submit 'Hinzufügen', :class => 'btn-primary' %>
-      <%= link_to 'Abbrechen', organizations_path, :class => 'btn' %>
+      <%= f.submit I18n.t("my_competitors._form.hinzufügen_class_=>_btn-primary") %>
+      <%= link_to I18n.t("my_competitors._form.abbrechen"), organizations_path, :class => 'btn' %>
     </div>
 <% end %>

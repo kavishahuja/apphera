@@ -1,7 +1,7 @@
 <%= form_for(@account) do |f| %>
     <% if @account.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
+          <h2><%= pluralize(@account.errors.count, "error") %> <%= I18n.t("accounts._form.prohibited_this_account_from_being_saved") %>:</h2>
 
           <ul>
             <% @account.errors.full_messages.each do |msg| %>
@@ -12,19 +12,19 @@
     <% end %>
 
     <div class="field">
-      Firma
+      <%= I18n.t("accounts_form_firma") %>
       <br/>
       <%= f.text_field :name %>
     </div>
-    <h3>Ansprechpartner</h3>
+    <h3><%= I18n.t("accounts_form_contactperson") %></h3>
     <div class="field">
-      Vorname
+      <%= I18n.t("accounts_form_firstname") %>
       <br/>
       <%= f.text_field :firstname %>
     </div>
 
     <div class="field">
-     Nachname
+     <%= I18n.t("accounts_form_lastname") %>
       <br/>
       <%= f.text_field :lastname %>
     </div>
@@ -35,7 +35,6 @@
       <%= f.text_field :phone %>
     </div>
     <div class="actions">
-      <%= f.submit 'Speichern', :class => 'btn-primary' %>
+      <%= f.submit I18n.t("form_save", :class => "btn-primary") %>
     </div>
 <% end %>
-

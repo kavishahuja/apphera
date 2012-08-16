@@ -1,7 +1,7 @@
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= pluralize(@contact.errors.count, "error") %> <%= I18n.t("contacts._form.prohibited_this_contact_from_being_saved") %>:</h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |msg| %>
@@ -12,38 +12,38 @@
   <% end %>
 
   <div class="field">
-    Firma<br />
+    <%= I18n.t("contacts._form.firma") %><br />
     <%= f.text_field :company %>
   </div>
   <div class="field">
-    Vorname<br />
+    <%= I18n.t("contacts._form.vorname") %><br />
     <%= f.text_field :firstname %>
   </div>
   <div class="field">
-    Nachname<br />
+    <%= I18n.t("contacts._form.nachname") %><br />
     <%= f.text_field :lastname %>
   </div>
   <div class="field">
-    Stadt<br />
+    <%= I18n.t("contacts._form.stadt") %><br />
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    Email<br />
+    <%= I18n.t("contacts._form.email") %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    Telefon<br />
+    <%= I18n.t("contacts._form.telefon") %><br />
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    Website<br />
+    <%= I18n.t("contacts._form.website") %><br />
     <%= f.text_field :website %>
   </div>
   <div class="field">
-    Kommentar<br />
+    <%= I18n.t("contacts._form.kommentar") %><br />
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
-    <%= f.submit 'Absenden', :class => 'btn-primary' %>
+    <%= f.submit I18n.t("contacts._form.absenden_class_=>_btn-primary") %>
   </div>
 <% end %>
