@@ -1,5 +1,7 @@
 # Apphera
-## The open source Internet, social media monitoring and social engagement platform
+## The open source Internet, social media monitoring and social engagement platform  
+### Now in 3 Languages available: English, German and Spanish
+
 
 Apphera is a complete platform, covering the full range of activities you need to cover when planning any kind of social media monitoring, social engagement platform, reputation management or SEO related activities. 
 
