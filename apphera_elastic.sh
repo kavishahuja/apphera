@@ -2,6 +2,14 @@ cd ~
 sudo apt-get update
 sudo apt-get -y install openjdk-7-jre -y
 
+#New Method #Easy Way
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.0.deb
+sudo dpkg -i elasticsearch-0.90.0.deb
+sudo service elasticsearch start
+
+
+
+#Old Method # causes Issues
 wget https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-0.19.0.tar.gz -O elasticsearch.tar.gz
 tar -xf elasticsearch.tar.gz
 rm elasticsearch.tar.gz
