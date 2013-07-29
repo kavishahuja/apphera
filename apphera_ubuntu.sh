@@ -50,7 +50,8 @@ sudo apt-get -y install git
 sudo chown -R deployer:deployer /home/deployer/
 cd /home/deployer 
 
-git clone https://github.com/nikoma/apphera.git
+git clone https://github.com/wilhelser/apphera   #This is the correct GIT command to fetch the entire project in /home/deployer location
+
 echo "everything there"
 echo "Installing Ruby now:"
 sudo apt-get -y install ruby1.9.1 ruby1.9.1-dev \
